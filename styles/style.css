@@ -1,0 +1,399 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5b5b5b;
+}
+
+.diagram {
+  position: relative;
+  width: 330px;
+}
+
+.diagram::after{
+  content: " ";
+  position: absolute;
+  top: 147px;
+  left: 16px;
+  width: 29px;
+  height: 239px;
+  background-image: url(../img/line.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.diagram__box-percent {
+  position: relative;
+  padding: 77px 0 35px
+}
+
+.diagram__flag-img {
+position: absolute;
+left: 50%;
+top: 13px;
+transform: translateX(-50%)
+}
+
+.diagram__percent {
+  margin: 0;
+  text-align: center;
+
+}
+
+.diagram__percent-big {
+  font-family: 'Gotham Pro';
+  font-size: 47px;
+  letter-spacing: -3px;
+  line-height: normal;
+}
+
+.diagram__percent-small {
+  display: inline-flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  font-family: 'Gotham Pro';
+}
+
+.diagram__percent-after-point{
+  font-size: 23px;
+}
+
+.diagram__percent-sign{
+  font-size: 17px;
+}
+
+.diagram__title {
+  margin: 0 auto;
+  max-width: 170px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.diagram__title span {
+  color: #fcd329;
+  font-size: 16px;
+}
+
+.diagram__text {
+  margin: 0 auto;
+  max-width: 150px;
+  text-align: center;
+  font-size: 11px;
+  color: #ccc;
+}
+
+.diagram__rating {
+  position: relative;
+  width: 50px;
+  margin: 7px auto 0;
+  padding-left: 20px;
+  color: #70a84b;
+}
+
+.diagram__rating::after {
+  content: " ";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border: 9px solid transparent;
+	border-bottom: 9px solid #70a84b;
+}
+
+.diagram__big-diagram {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.diagram__big-diagram::after {
+  content: " ";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  width: 38px;
+  height: 47px;
+  transform: translateX(-50%);
+  background-image: url(../img/loyalty.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.diagram__svg-big .circle-base {
+  stroke: #ececec;
+  stroke-dasharray: 610 75;
+  stroke-dashoffset: 133;
+}
+
+.diagram__svg-big .circle-green {
+  stroke:#70a84b;
+  transform-origin: center;
+  transform: rotate(-70deg);
+  animation: circle-green 1.5s forwards;
+}
+
+.diagram__svg-big .circle-yellow {
+  stroke: #fcd329;
+  transform-origin: center;
+  transform: rotate(-70deg);
+  animation: circle-yellow 2s forwards;
+}
+
+.diagram__box-info {
+  margin-top: 20px;
+  padding: 26px 0;
+  width: 100%;
+}
+
+.diagram__info-item{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 48px;
+}
+
+.diagram__info-item:not(:last-child){
+  margin-bottom: 13px;
+}
+
+.diagram__info-title {
+  flex: 0 0 87px;
+  margin-right: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.diagram__info-statistics{
+  flex: 0 0 40px;
+  margin-right: 6px;
+}
+
+.diagram__peple-count{
+  position: relative;
+  padding-right: 20px;
+  font-size: 12px;
+  color: #ccc;
+  text-align: right;
+}
+
+.diagram__peple-count::after{
+  content: " ";
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  width: 11px;
+  height: 11px;
+  background-image: url(../img/human_full.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.diagram__people-percent{
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.diagram__info-diagram{
+  flex: 0 0 90px;
+  position: relative;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid #ececec;
+  background-color: #f9f9f9;
+}
+
+.diagram__info-percent{
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  text-align: right;
+  padding: 7px 2px 0 47px;
+  background-color: #f9f9f9;
+}
+
+.diagram__percent-text{
+  font-size: 13px;
+}
+
+.diagram__svg-big-info{
+  width: 45px;
+  height: 28px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border-top-left-radius: 5px;
+}
+
+.diagram__svg-info{
+width: 89px;
+height: 13px;
+position: absolute;
+bottom: -2px;
+left: -2px;
+border-radius: 5px;
+}
+
+.svg-line{
+  opacity: 0.5;
+}
+
+.first-line{
+animation: line-first 1.5s forwards;
+}
+
+.first-line-big{
+  animation: line-firs-big 1.5s forwards;
+}
+
+.second-line{
+  animation: line-second 1.5s forwards;
+  }
+  
+  .second-line-big{
+    animation: line-second-big 1.5s forwards;
+  }
+
+  .third-line{
+    animation: line-third 1.5s forwards;
+    }
+    
+    .third-line-big{
+      animation: line-third-big 1.5s forwards;
+    }
+
+.diagram__info-item--green .svg-line-big{
+  stroke: #70a84b;
+}
+
+.diagram__info-item--green .svg-line{
+  stroke: #70a84b;
+}
+
+.diagram__info-item--yellow .svg-line-big{
+  stroke: #fcd329;
+}
+
+.diagram__info-item--yellow .svg-line{
+  stroke: #fcd329;
+}
+
+.diagram__info-item--red .svg-line-big{
+stroke: #ed5243;
+}
+
+.diagram__info-item--red .svg-line{
+  stroke: #ed5243;
+}
+
+
+@keyframes circle-green {
+  0%{
+    stroke-dasharray: 685;
+    stroke-dashoffset: 685;
+  }
+
+  100% {
+    stroke-dasharray: 427 258;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle-yellow {
+  0%{
+    stroke-dasharray: 685;
+    stroke-dashoffset: 685;
+  }
+
+  100% {
+    stroke-dasharray: 219 466;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-first {
+  0%{
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+  }
+
+  100%{
+    stroke-dasharray: 30 60;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-firs-big {
+  0%{
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+  }
+
+  100%{
+    stroke-dasharray: 32 13;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-second {
+  0%{
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+  }
+
+  100%{
+    stroke-dasharray: 29 61;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-second-big {
+  0%{
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+  }
+
+  100%{
+    stroke-dasharray: 33 12;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-third {
+  0%{
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+  }
+
+  100%{
+    stroke-dasharray: 31 59;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-third-big {
+  0%{
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+  }
+
+  100%{
+    stroke-dasharray: 26 19;
+    stroke-dashoffset: 0;
+  }
+}
+
